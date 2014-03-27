@@ -63,13 +63,5 @@ var server = app.listen(process.env.PORT, function() {
     console.log('Listening on port %d', server.address().port);
 });
 
-$( "#button2" ).bind( "click", function(event, ui) {
-    alert("Posting a new quote");
-    var jsonUrl = "http://localhost:3001/quote";
-    var newQuote = { "author" : "foo", "text" : "some text" };
-    $.post(jsonUrl,newQuote, function(data) {
-      alert("Added " + data.author + " " + data.text);
-    }, 'json');
-  });
 
 
